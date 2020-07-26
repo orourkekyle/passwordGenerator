@@ -21,10 +21,15 @@ function createPassword() {
   var useSpec = confirm("Would you like special characters in your password?")
 
   if (useLower === true && useUpper === true && useNum === true && useSpec === true) {
+    arrayPass = [];
     for (var i =0; i <= passLength; i++) {
       allChar = lowerArray.concat(upperArray, numArray, specArray);
-      arrayPass = allChar[Math.floor(Math.random() * allChar.length -1)];
-      console.log(arrayPass);
+      var char = allChar[Math.floor(Math.random() * allChar.length - 1)];
+      arrayPass.push(char);
+      console.log(char);
+      // arrayPass = allChar[Math.floor(Math.random() * allChar.length -1)];
+      // console.log(arrayPass);
+      // console.log([1,2,3])
       // var strPass = arrayPass.join("");
       // console.log(strPass);
       // return strPass;
